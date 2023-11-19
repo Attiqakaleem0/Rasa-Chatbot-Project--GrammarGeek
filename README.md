@@ -17,3 +17,5 @@ TensorFlow: Powering the Diet Classifier for optimized language learning.
 WhitespaceTokenizer
 RegexFeaturizer
 CountVectorsFeaturizer
+![Screenshot (19)](https://github.com/Attiqakaleem0/Rasa-Chatbot-Project--GrammarGeek/assets/44442189/07d36a51-e219-4ce6-8076-7d059926d9a5)
+![Screenshot (18)](https://github.com/Attiqakaleem0/Rasa-Chatbot-Project--GrammarGeek/assets/44442189/d06b966b-0775-45e3-b2c3-9e331933c936)
