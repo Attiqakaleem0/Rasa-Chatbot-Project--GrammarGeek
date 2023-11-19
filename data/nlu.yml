@@ -1,0 +1,598 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - you are right
+    - thank you for help
+
+- intent: deny
+  examples: |
+    - you are wrong
+    - no, you are wrong.
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: deny_no
+  examples: |
+    - No
+    - No thank you
+    - No thanks
+
+
+- intent: want_meaning
+  examples: |
+    - I want to learn the meaning?
+    - tell me the meaning.
+
+- intent: want_to_learn_grammar
+  examples: |
+    - I want to learn the grammar.
+    - teach me grammar.
+    - Can you provide lessons on grammar?
+    - I'm looking for step-by-step guidance on grammar.
+    - What topics should I cover to grasp grammar concepts?
+    - I'm a beginner; help me understand grammar.
+    - Teach me the fundamental concepts of grammar.
+    - What are the key principles of grammar that I should know?
+    - I'm interested in exploring grammar.
+    - Where should I start to learn grammar?
+    - Can you provide resources for studying grammar?
+    - I want to learn about grammar.
+    - Teach me the basics of grammar.
+    - Can you guide me through understanding grammar?
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: term_to_get_meaning
+  examples: |
+    - [Serendipity](term)
+    - [Ubiquitous](term)
+    - [Ephemeral](term)
+    - [Pernicious](term)
+    - [Quixotic](term)
+    - [Esoteric](term)
+    - [Cacophony](term)
+    - [Sycophant](term)
+    - [Eloquent](term)
+    - [Capitulate](term)
+    - [happy](term)
+    - [tree](term)
+    - [handsome](term)
+    - [Capernaum](term) meaning
+    - [insipid](term)
+    - [fool](term)
+    - [savant](term)
+    - [Serendipity](term)
+    - [Ubiquitous](term)
+    - [Ephemeral](term)
+    - [Pernicious](term)
+    - [Quixotic](term)
+    - [Esoteric](term)
+    - [Cacophony](term)
+    - [Sycophant](term)
+    - [Eloquent](term)
+    - [Capitulate](term)
+    - [Pragmatic](term)
+    - [Mellifluous](term)
+    - [Resilience](term)
+    - [Ubiquity](term)
+    - [Perfidious](term)
+    - [Benevolent](term)
+    - [Pervasive](term)
+    - [Dichotomy](term)
+    - [Nefarious](term)
+    - [Melancholy](term)
+    - [Languid](term)
+    - [Voracious](term)
+    - [Munificent](term)
+    - [Quintessential](term)
+    - [Reverie](term)
+    - [Cognizant](term)
+    - [Panacea](term)
+    - [Aplomb](term)
+    - [Lethargic](term)
+    - [Belligerent](term)
+    - [Debilitate](term)
+    - [Ineffable](term)
+    - [Nebulous](term)
+    - [Effervescent](term)
+    - [Cacophony](term)
+    - [Surreptitious](term)
+    - [Sycophant](term)
+    - [Voracious](term)
+    - [Munificent](term)
+    - [Quintessential](term)
+    - [Reverie](term)
+    - [Cognizant](term)
+    - [Panacea](term)
+    - [Aplomb](term)
+    - [Lethargic](term)
+    - [Belligerent](term)
+    - [Debilitate](term)
+    - [Ephemeral](term)
+    - [Pragmatic](term)
+    - [Melancholy](term)
+    - [Nebulous](term)
+    - [Ineffable](term)
+    - [Effervescent](term)
+    - [Alacrity](term)
+    - [Ambiguous](term)
+    - [Ephemeral](term)
+    - [Quotidian](term)
+    - [Reticent](term)
+    - [Sycophant](term)
+    - [Voracious](term)
+    - [Munificent](term)
+    - [Quintessential](term)
+    - [Reverie](term)
+    - [Cognizant](term)
+    - [Panacea](term)
+    - [Aplomb](term)
+    - [Lethargic](term)
+    - [Belligerent](term)
+    - [Debilitate](term)
+    - [Ephemeral](term)
+    - [Pragmatic](term)
+    - [Melancholy](term)
+    - [Nebulous](term)
+    - [Ineffable](term)
+    - [Effervescent](term)
+    - [Alacrity](term)
+    - [Ambiguous](term)
+    - [Quotidian](term)
+    - [Reticent](term)
+    - [Sycophant](term)
+    - [Voracious](term)
+    - [Munificent](term)
+    - [Quintessential](term)
+    - [Reverie](term)
+    - [Cognizant](term)
+    - [Panacea](term)
+    - [Aplomb](term)
+    - [Lethargic](term)
+    - [Belligerent](term) meaning
+    - [Debilitate](term) meaning
+    - [Ephemeral](term) meaning
+    - [Pragmatic](term) means
+    - [Melancholy](term) means
+    - [Nebulous](term) meaning
+    - [Ineffable](term) meaning 
+    - [Effervescent](term)
+    - [Alacrity](term)
+    - [Ambiguous](term)
+    - [Quotidian](term)
+    - [Reticent](term)
+    - define [happy]{"entity":"term"} 
+    - meaning of [sadness]{"entity":"term"} 
+    - Define [happiness](term).
+    - What does "[happy](term)" mean? 
+    - Explain the term "[happy](term)." 
+    - Tell me the definition of "[happy](term)." 
+    - I'd like to know the meaning of "[happy]{"entity":"term"} ."
+    - Define the word "[happy](term)" for me. 
+    - Can you clarify the term "[happy](term)"? 
+    - What is the definition of [happiness]{"entity":"term"} ? 
+    - I'm not sure what "[happy](term)" means; can you define it? 
+    - Please provide a definition for "[happy]{"entity":"term"}."
+    - Describe the concept of "[happy](term)" to me. 
+    - What's the meaning of "[happy](term)" in simple terms? 
+    - I'm unfamiliar with the term "[happy](term)"; help me understand it.
+    - Give me a straightforward explanation of "[happy](term)." 
+    - I need a clear definition of the word "[happy](term)." 
+    - Help me grasp the definition of "[happy](term)." 
+    - Can you provide a simple definition of "[happy](term)"? 
+    - What's the simplest explanation of "[happy](term)"? 
+    - Clarify the term "[happy](term)" for me. 
+    - I want to learn the meaning of "[happy](term)." 
+    - Explain the term "[excitement](term)."
+    - What does "[surprise](term)" mean? 
+    - Define [anger](term)
+    - Tell me the definition of "[confusion](term)." 
+    - What is the meaning of "[fear](term)"? 
+    - I'd like to know the definition of "[curiosity](term)." 
+    - Can you clarify the term "[contentment](term)"? 
+    - What's the definition of [disappointment](term)? 
+    - Describe the concept of "[hope](term)" to me. 
+    - What's the meaning of "[optimism](term)" in simple terms? 
+    - I'm not sure what "[frustration](term)" means; can you define it? 
+    - Please provide a definition for "[joy](term)." 
+    - Help me grasp the definition of "[anxiety](term)." 
+    - Can you give a straightforward explanation of "[satisfaction](term)"? 
+    - What's the simplest explanation of "[calm](term)"? 
+    - Clarify the term "[regret](term)" for me. 
+    - I want to learn the meaning of "[amusement](term)." 
+    - Provide a simple definition of "[disgust](term)." 
+    - What's the simplest explanation of "[anticipation](term)"? 
+    - Clarify the term "[sympathy](term)" for me. 
+    - I need a clear definition of the word "[pride](term)." 
+    - Help me understand the definition of "[grief](term). " 
+    - Can you provide a simple definition of "[shock](term)"? 
+    - What's the meaning of "[pity](term)" in simple terms?
+    - Describe the concept of "[contempt](term)" to me. 
+    - I'm unfamiliar with the term "[delight](term)"; can you define it? 
+    - Give me a clear definition of the word "[disapproval](term)."
+    - What does "[sympathy](term)" mean? 
+    - Explain the term "[awe](term)." 
+    - Define [pride](term)
+    - Tell me the definition of "[amazement](term)."
+    - What is the meaning of "[disgust](term)"? 
+    - I'd like to know the definition of "[shame](term)." 
+    - Can you clarify the term "[hope](term)"? 
+    - What's the definition of [boredom](term)?
+    - Describe the concept of "[excitement](term)" in simple terms.
+    - What's the meaning of "[hunger](term)" in simple terms? 
+    - I'm not sure what "[thirst](term)" means; can you define it? 
+    - Please provide a definition for "[sleepiness](term)."
+    - Help me grasp the definition of "[alertness](term)."
+    - Can you give a straightforward explanation of "[awe](term)"?
+    - What's the simplest explanation of "[skepticism](term)"?
+    - Clarify the term "[surprise](term)" for me. 
+    - I want to learn the meaning of "[approval](term)." 
+    - Provide a simple definition of "[doubt](term)." 
+    - What's the simplest explanation of "[pessimism](term)"?
+    - Clarify the term "[trust](term)" for me. 
+    - I need a clear definition of the word "[confusion](term)." 
+    - Help me understand the definition of "[disbelief](term)." 
+    - Can you provide a simple definition of "[apprehension](term)"?
+    - What's the simplest explanation of "[interest](term)"? 
+    - Describe the concept of "[gratitude](term)" to me. 
+    - I'm unfamiliar with the term "[indifference](term)"; can you define it? 
+    - Give me a clear definition of the word "[envy](term)." 
+    - What does "[affection](term)" mean? 
+    - Explain the term "[resentment](term)." 
+    - Define [elation](term)
+    - Tell me the definition of "[loneliness](term)." 
+    - What is the meaning of "[nostalgia](term)"? 
+    - I'd like to know the definition of "[disconnection](term)." 
+    - Can you clarify the term "[insecurity](term)"? 
+    - What's the definition of [fascination](term)? 
+    - Describe the concept of "[sorrow](term)" to me. 
+    - What's the meaning of "[regret](term)" in simple terms? 
+    - I'm not sure what "[shyness] (term)" means; can you define it? 
+    - Please provide a definition for "[compassion](term)." 
+    - Help me grasp the definition of "[awe](term)." 
+    - Can you give a straightforward explanation of "[pride](term)"? 
+    - What's the simplest explanation of "[grief](term)"? 
+    - Clarify the term "[satisfaction](term)" for me.
+    - I want to learn the meaning of "[displeasure](term)." 
+    - Provide a simple definition of "[contempt](term)." 
+    - What's the simplest explanation of "[enthusiasm](term)"? 
+    - Clarify the term "[bitterness](term)" for me.
+    - I need a clear definition of the word "[delight](term)." 
+    - Help me understand the definition of "[irritation](term)." 
+    - Can you provide a simple definition of "[jubilation](term)"? 
+    - What's the meaning of "[serenity](term)" in simple terms? 
+    - Describe the concept of "[astonishment](term)" to me. 
+    - I'm unfamiliar with the term "[disapproval] (term)"; can you define it? 
+    - Give me a clear definition of the word "[discomfort](term)." 
+    - What does "[sympathy](term)" mean? 
+    - Explain the term "[fondness](term)." 
+    - Define [contempt](term)
+    - Tell me the definition of "[appreciation](term)." 
+    - What is the meaning of "[acceptance](term)"? 
+    - I'd like to know the definition of "[eagerness](term)." 
+    - Can you clarify the term "[hopelessness](term)"? 
+    - What's the definition of [irritation](term)?
+    - Describe the concept of "[satisfaction](term)" in simple terms. 
+    - What's the meaning of "[disgust](term)" in simple terms?
+    - I'm not sure what "[admiration](term)" means; can you define it? 
+    - Please provide a definition for "[amusement](term)." 
+    - Help me grasp the definition of "[contempt](term)." 
+    - Can you give a straightforward explanation of "[disappointment](term)"? 
+    - What's the simplest explanation of "[worry](term)"? 
+    - Clarify the term "[pity](term)" for me. 
+    - I want to learn the meaning of "[happiness](term)." 
+    - Provide a simple definition of "[displeasure](term)."
+    - What's the simplest explanation of "[anger](term)"?
+
+- intent: noun
+  examples: |
+    - noun
+    - nouns
+    - What is a Noun?
+    - explain nouns
+    - what are nouns
+
+- intent: verb
+  examples: |
+    - verb
+    - verbs
+    - What is a verb?
+    - explain verbs
+    - what are verbs
+    - What is the definition of a verb?
+    - Can you define what a verb is?
+    - How would you describe the concept of a verb?
+    - Could you explain the role of verbs in a sentence?
+    - I'm not clear on verbs, can you provide a simple explanation?
+    - What function do verbs serve in language?
+    - Could you give me some everyday examples of verbs?
+    - What are actions that can be represented by verbs?
+    - Why are verbs important in language?
+    - What purpose do verbs serve in communication?
+    - How do verbs contribute to the structure of a sentence?
+
+- intent: adjective
+  examples: |
+    - adjective
+    - adjectives
+    - What is a adjective?
+    - explain adjectives
+    - what are adjectives
+    - What is the definition of an adjective?
+    - Can you provide a clear definition of what an adjective is?
+    - How would you describe the concept of an adjective?
+    - Could you explain the role of adjectives in a sentence?
+    - I'm not quite clear on adjectives, can you give a simple explanation?
+    - How do adjectives describe or modify nouns or pronouns?
+    - How do I recognize adjectives in a sentence?
+    - Can you help me identify examples of adjectives in a paragraph?
+    - What are some common words that function as adjectives?
+
+- intent: sentence
+  examples: |
+    - sentence
+    - sentences
+    - What is a sentence?
+    - explain senteces
+    - what are sentences
+    - What is the definition of a sentence?
+    - Can you provide a clear definition of a sentence?
+    - How would you describe what a sentence is?
+    - Could you explain the concept of sentences to me?
+    - I'm not quite clear on sentences, can you give a simple explanation?
+    - What makes a group of words form a sentence?
+    - How do I recognize a sentence in a paragraph?
+    - Can you help me identify sentences in a text?
+    - What are some key characteristics of a sentence?
+    - Could you give me some examples of sentences?
+    - What are common types of sentences?
+
+
+- intent: subject_and_predicate
+  examples: |
+    - What is a subject and predicate?
+    - explain subject and predicate
+    - What is the definition of a subject in a sentence?
+    - Can you provide a clear definition of what a predicate is?
+    - How would you describe the concept of a subject and a predicate?
+    - Could you explain the role of the subject in a sentence?
+    - I'm not quite clear on predicates, can you give a simple explanation?
+    - How do subjects and predicates work together to form a complete sentence?
+    - How do I recognize the subject in a sentence?
+    - Can you help me identify examples of predicates in a paragraph?
+    - What are some common indicators of subjects and predicates?
+
+- intent: tenses
+  examples: |
+    - tenses
+    - tense
+    - What is a tense?
+    - explain tense
+    - what are tenses
+    - What is the definition of a tense in grammar?
+    - Can you provide a clear definition of what a tense is?
+    - How would you describe the concept of tense?
+    - Could you explain the role of tenses in a sentence?
+    - I'm not quite clear on tenses, can you give a simple explanation?
+    - How do tenses indicate time in language?
+    - How do I recognize different tenses in a sentence?
+    - Can you help me identify examples of different tenses in a paragraph?
+    - What are some common words or indicators of tenses?
+    - Could you give me some everyday examples of different tenses?
+    - What are the main types of tenses, and can you provide examples of each?
+    - Can you share sentences illustrating the use of different tenses?
+
+
+- intent: punctuation
+  examples: |
+    - puntuation
+    - puntuations
+    - What is a punctuation?
+    - explain punctuation
+    - What is the definition of punctuation in written language?
+    - Can you provide a clear definition of what punctuation is?
+    - How would you describe the concept of punctuation?
+
+- intent: adverb
+  examples: |
+    - adverb
+    - adverbs 
+    - What is a adverb?
+    - explain adverb
+    - what are adverbs
+    - What is the definition of an adverb?
+    - Can you provide a clear definition of what an adverb is?
+    - How would you describe the concept of an adverb?
+    - Could you explain the role of adverbs in a sentence?
+    - I'm not quite clear on adverbs, can you give a simple explanation?
+    - How do adverbs modify or describe other words?
+    - Could you give me some everyday examples of adverbs?
+    - What are different ways adverbs can be used in sentences?
+    - Can you provide sentences illustrating the use of adverbs?
+
+- intent: writing_advice
+  examples: |
+    - how can I improve my writing
+    - advice me how can i improve my writing
+    - How can I effectively improve my writing skills?
+    - What strategies do you recommend for enhancing my writing?
+    - Can you provide me with tips to become a better writer?
+    - What advice do you have for someone looking to improve their writing?
+    - Advice me on specific steps to take for writing improvement.
+    - Are there habits or practices that can contribute to better writing?
+
+- intent: writing_sources
+  examples: |
+    - provide me sources to improve my writing.
+    - share a link that help me to improve my English
+    - Can you provide me with sources to enhance my writing skills?
+    - Where can I find reliable materials to improve my English?
+    - Share links or recommendations for improving English proficiency.
+    - What online resources can I use to enhance my writing abilities?
+    - Are there specific websites or courses that focus on improving writing?
+    - Can you suggest platforms offering guidance for English language development?
+
+- intent: grammar
+  examples: |
+    - grammar
+    - grammars 
+    - What is grammar
+    - define grammar
+
+- intent: need_cheer_up
+  examples: |
+    - Can I do it?
+    - can I improve my writing
+    - can I be fluent?
+    - Can I improve my writing skills?
+    - Is it possible for me to become more fluent in a language?
+    - Can I develop the ability to do it?
+    - How can I improve my writing?
+    - What steps can I take to enhance my language fluency?
+    - Are there specific strategies for becoming more proficient?
+    - Is it realistic for me to aim for better writing?
+    - Can I realistically achieve fluency with effort and practice?
+    - What are the chances of success in reaching my language goals?
+
+- intent: pronoun
+  examples: |
+    - pronoun
+    - pronouns
+    - What is the definition of a pronoun?
+    - Can you provide a clear definition of what a pronoun is?
+    - How would you describe the concept of a pronoun?
+    - Could you explain the role of pronouns in a sentence?
+    - I'm not quite clear on pronouns, can you give a simple explanation?
+    - How do pronouns function as substitutes for nouns
+    - How do I recognize pronouns in a sentence?
+    - Can you help me identify examples of pronouns in a paragraph?
+    - What are some common words that function as pronouns?
+    - What is a pronoun?
+    - How would you define the term "pronoun"?
+    - Can you provide a clear and concise definition of a pronoun?
+    - In linguistic terms, what does the term "pronoun" refer to?
+    - How is a pronoun defined in the context of grammar?
+    - What characteristics distinguish a word as a pronoun?
+    - What role does a pronoun play in language structure?
+    - When discussing language parts, what category does a pronoun fall into?
+    - What function does a pronoun serve within a sentence?
+    - How is the concept of a pronoun typically explained in language studies?
+    - What is the purpose of using pronouns in communication?
+    - In grammar, how do experts define the term "pronoun"?
+    - Can you give a brief definition of the term "pronoun" and its role in sentences?
+    - When learning about language, how is the concept of a pronoun usually introduced?
+    - What are the defining characteristics that differentiate pronouns from other linguistic elements?
+
+- intent: conjunction
+  examples: |
+    - conjunction
+    - conjunctions
+    - What is the definition of a conjunction?
+    - Can you provide a clear definition of what a conjunction is?
+    - How would you describe the concept of a conjunction?
+    - Could you explain the role of conjunctions in a sentence?
+    - I'm not quite clear on conjunctions, can you give a simple explanation?
+    - How do conjunctions connect words, phrases, or clauses?
+    - How do I recognize conjunctions in a sentence?
+    - Can you help me identify examples of conjunctions in a paragraph?
+    - What are some common words that function as conjunctions?
+
+- intent: preposition
+  examples: |
+    - preposition
+    - prepostions
+    - What is the definition of a preposition?
+    - Can you provide a clear definition of what a preposition is?
+    - How would you describe the concept of a preposition?
+    - Could you explain the role of prepositions in a sentence?
+    - I'm not quite clear on prepositions, can you give a simple explanation?
+    - How do prepositions show the relationship between a noun (or pronoun) and other elements in a sentence?
+    - How do I recognize prepositions in a sentence?
+    - Can you help me identify examples of prepositions in a paragraph?
+    - What are some common words that function as prepositions?
+    - What is the primary function of a preposition in a sentence?
+    - When learning grammar, how is the concept of a preposition typically introduced?
+    - Can you offer a concise definition of the term "preposition" in linguistic terms?
+    - How do prepositions contribute to the overall structure and meaning of a sentence?
+    - In the context of grammar, what role do prepositions play in connecting elements?
+    - Can you elaborate on how prepositions establish spatial and temporal relationships?
+    - What are some common mistakes people make when using prepositions in sentences?
+    - When analyzing a sentence, how can one determine the presence of a preposition?
+    - Could you provide examples of sentences where prepositions are crucial for clarity?
+    - In linguistic studies, what category does a preposition fall into among language parts?
+    - How do prepositions assist in indicating the location or direction of an action?
+    - Can you give a practical example that illustrates the function of a preposition?
+    - Are there certain rules or guidelines for the correct usage of prepositions in writing?
+    - What distinguishes a word as a preposition, and how is it different from other parts of speech?
+    - How do prepositions contribute to the overall flow and coherence of written and spoken language?
+
+- intent: interjection
+  examples: |
+    - inerjunction
+    - interjunctions
+    - What is the definition of an interjection?
+    - Can you provide a clear definition of what an interjection is?
+    - How would you describe the concept of an interjection?
+    - Could you explain the role of interjections in a sentence?
+    - I'm not quite clear on interjections, can you give a simple explanation?
+    - How do interjections express strong emotions in language?
+    - How do I recognize interjections in a sentence?
+    - Can you help me identify examples of interjections in a paragraph?
+    - What are some common words or phrases that function as interjections?
+
+- intent: parts_of_speech
+  examples: |
+    - How many parts of speech are there?
+    - what are parts of speech?
+    - How many parts of speech are there in grammar?
+    - Can you tell me the total number of parts of speech?
+    - What are the different parts of speech?
+    - Can you provide a list of the parts of speech in language?
+    - How do I recognize and understand each part of speech?
+    - Can you help me identify examples of different parts of speech?
+    - Could you give me examples of sentences with each part of speech?
+    - How do the various parts of speech function in sentences?

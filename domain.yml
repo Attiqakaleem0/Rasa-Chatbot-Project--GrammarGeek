@@ -1,0 +1,138 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - deny_no
+  - bot_challenge
+  - noun
+  - pronoun
+  - verb
+  - adjective
+  - adverb
+  - conjunction
+  - preposition
+  - interjection
+  - sentence
+  - subject_and_predicate
+  - tenses
+  - punctuation
+  - writing_advice
+  - writing_sources
+  - grammar
+  - need_cheer_up
+  - parts_of_speech
+  - term_to_get_meaning
+  - want_meaning
+  - want_to_learn_grammar
+
+entities:
+  - term
+
+responses:
+  utter_greet:
+  - text: "Hello! I am GG your language partner. What you want to learn about?"
+    buttons:
+      - title: "I want to know about the meaning of a word."
+        payload: "/want_meaning"
+      - title: I want to learn Grammar.
+        payload: "/want_to_learn_grammar"
+
+  utter_what_word:
+  - text: "What is the word you want to learn?"
+
+  utter_which_grammatical_concept:
+  - text: "Grammar is the set of rules governing the structure and use of language, encompassing syntax, morphology, and semantics for effective communication. 
+  There are eight parts of speech in grammar: noun, pronoun, verb, adjective, adverb, conjunction, preposition, and interjection.
+Which parts of speech do you want to explore further?"
+
+  utter_goodbye:
+  - text: "Goodbye! Happy learning!"
+
+  utter_happy_to_help:
+    - text: "I am happy to help you."
+    - text: "I am glad you found me helpful"
+
+  utter_sorry:
+    - text: "I am sorry, is there anything else I can help you with?"
+
+  utter_I_am_a_bot:
+  - text: "I am a bot developed by Attiqa"
+
+  utter_noun:
+  - text: "A noun is a word that represents a person, place, thing, or idea.
+Example: Cat, London, Love, Teacher."
+
+  utter_verb:
+  - text: "A verb is a word that describes an action or state of being.
+Example: Run, Is, Laugh, Eat."
+
+  utter_adjective:
+  - text: "An adjective is a word that describes or modifies a noun.
+Example: \"Beautiful\" in \"Beautiful flowers,\" \"Green\" in \"Green apples.\""
+
+  utter_sentence:
+  - text: "A sentence is a group of words that expresses a complete thought.
+Example: \"I like ice cream.\""
+
+  utter_subject_and_predicate:
+  - text: " The subject is the main part of a sentence that tells who or what the sentence is about.
+The predicate is the part of the sentence that tells what the subject is doing.
+Example: In the sentence \"She sings,\" \"She\" is the subject, and \"sings\" is the predicate."
+
+  utter_tenses:
+  - text: "Tenses indicate when an action takes place. There are three main tenses: past, present, and future.
+Example: \"I ate\" (past), \"I eat\" (present), \"I will eat\" (future)"
+
+  utter_punctuation:
+  - text: "Punctuation marks like periods, commas, and question marks are used to organize and clarify sentences.
+Example: \"Hello, how are you?\""
+
+  utter_adverb:
+  - text: "An adverb is a word that modifies a verb, adjective, or other adverb. It often tells how, when, where, or to what extent.
+Example: \"She sings beautifully.\" Here, \"beautifully\" is an adverb describing how she sings."
+
+  utter_writing_advice:
+  - text: "Read widely and write daily to strengthen your language skills and express your thoughts more effectively. Moreover, seek feedback to refine your writing, aiming for clarity and precision in every sentence."
+
+  utter_writing_source:
+  - text: "Here's a link to a well-known website where you can learn English:
+https://www.duolingo.com/
+Duolingo offers interactive lessons and exercises that cover various aspects of the English language, including vocabulary, grammar, and listening comprehension. It's a user-friendly platform that can help you improve your English skills at your own pace. Plus, it's available as both a website and a mobile app."
+
+  utter_grammar:
+  - text: "Grammar is the set of rules and principles that govern the structure and composition of a language. It defines how words are organized into sentences and how those sentences convey meaning. "
+
+  utter_cheer_up_here:
+  - text: "Learning a language foreign to you is a challenging task. Cheer Up! you can do it."
+
+  utter_parts_of_speech:
+  - text: "Parts of speech are categories that classify words based on their functions and roles in sentences, including nouns, verbs, adjectives, adverbs, pronouns, prepositions, conjunctions, and interjections."
+
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't understand that. Could you rephrase?
+  
+  utter_pronoun:
+  - text: "A pronoun is a word that functions as a substitute for a noun, representing a person, place, thing, or idea.
+A pronoun, such as \"he,\" \"she,\" or \"it,\" replaces a specific noun in a sentence, like \"John is my friend; he is very talented.\""
+
+  utter_preposition:
+  - text: "A preposition is a word that shows the relationship between a noun (or pronoun) and other words in a sentence, indicating location, direction, time, or relationship, as in \"The cat is on the table.\""
+
+  utter_conjunction:
+  - text: "A conjunction is a word that connects words, phrases, or clauses in a sentence, facilitating the flow and coherence of language, such as \"and,\" \"but,\" or \"because.\""
+
+  utter_interjection:
+  - text: "An interjection is a word or phrase that expresses strong emotion or sudden exclamatory remarks, often standing alone in a sentence, for example, \"Wow!\" or \"Ouch!\""
+
+actions:
+
+  - action_call_flask_api
+  - action_get_term_meaning
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

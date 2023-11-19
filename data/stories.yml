@@ -1,0 +1,182 @@
+version: "3.1"
+
+stories:
+
+- story: Greeting Path
+  steps: 
+  - intent: greet
+  - action: utter_greet
+
+- story: User asks for meaning
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: want_meaning
+  - action: utter_what_word
+  - intent: term_to_get_meaning
+  - action: action_get_term_meaning
+  - intent: term_to_get_meaning
+  - action: action_get_term_meaning
+
+- story: User asks for grammar
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: want_to_learn_grammar
+  - action: utter_which_grammatical_concept
+
+- story: meaning Solo story
+  steps: 
+  - intent: term_to_get_meaning
+  - action: action_get_term_meaning
+
+- story: noun path
+  steps:
+  - intent: want_to_learn_grammar
+  - action: utter_which_grammatical_concept
+  - intent: noun
+  - action: utter_noun
+
+- story: verb path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: want_to_learn_grammar
+  - action: utter_which_grammatical_concept
+  - intent: verb
+  - action: utter_verb
+
+- story: adjective path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: want_to_learn_grammar
+  - action: utter_which_grammatical_concept
+  - intent: adjective
+  - action: utter_adjective
+
+- story: sentence path
+  steps:
+  - intent: sentence
+  - action: utter_sentence
+
+- story: subject_predicate path
+  steps:
+  - intent: subject_and_predicate
+  - action: utter_subject_and_predicate
+
+- story: tenses path
+  steps:
+  - intent: tenses
+  - action: utter_tenses
+
+- story: punctuation path
+  steps:
+  - intent: want_to_learn_grammar
+  - action: utter_which_grammatical_concept
+  - intent: punctuation
+  - action: utter_punctuation
+
+- story: adverb path
+  steps:
+  - intent: want_to_learn_grammar
+  - action: utter_which_grammatical_concept
+  - intent: adverb
+  - action: utter_adverb
+
+- story: writing advice path
+  steps:
+  - intent: want_to_learn_grammar
+  - action: utter_which_grammatical_concept
+  - intent: writing_advice
+  - action: utter_writing_advice
+
+- story: writing sources path
+  steps:
+  - intent: writing_sources
+  - action: utter_writing_source
+
+- story: grammar path
+  steps:
+  - intent: grammar 
+  - action: utter_grammar
+
+- story: speech path
+  steps:
+  - intent: want_to_learn_grammar
+  - action: utter_which_grammatical_concept
+  - intent: parts_of_speech
+  - action: utter_parts_of_speech
+
+- story: Cheer up Path
+  steps: 
+  - intent: need_cheer_up
+  - action: utter_cheer_up_here
+
+- story: Are you Bot Path
+  steps: 
+  - intent: bot_challenge
+  - action: utter_I_am_a_bot
+
+- story: Agree Path
+  steps: 
+  - intent: affirm
+  - action: utter_happy_to_help
+
+- story: Disagree Path
+  steps: 
+  - intent: deny
+  - action: utter_sorry
+
+- story: No path
+  steps: 
+  - intent: deny_no
+  - action: utter_goodbye
+
+- story: Pronoun Path
+  steps: 
+  - intent: pronoun
+  - action: utter_pronoun
+
+- story: Preposition path
+  steps: 
+  - intent: preposition
+  - action: utter_preposition
+
+- story: Conjunction path
+  steps: 
+  - intent: conjunction
+  - action: utter_conjunction
+
+- story: Interjection path
+  steps: 
+  - intent: interjection
+  - action: utter_interjection
+
+  
+- story: Goodbye Path
+  steps: 
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+- story: Meaning to Grammar Transition
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: want_meaning
+  - action: utter_what_word
+  - intent: term_to_get_meaning
+  - action: action_get_term_meaning
+  - intent: term_to_get_meaning
+  - action: action_get_term_meaning
+  - intent: want_to_learn_grammar
+  - action: utter_which_grammatical_concept
+  - intent: verb  
+  - action: utter_verb
+  - intent: adjective 
+  - action: utter_adjective
+  - intent: tenses 
+  - action: utter_tenses
+  - intent: punctuation  
+  - action: utter_punctuation

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Grammar Geek</title>
+    <link rel="shortcut icon" href="teacher.png" type="image/png">
+
+    <style>
+        /* Custom CSS styles for a more appealing design */
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .chat-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            height: 340px;
+            overflow-y: auto;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .user-message {
+            background-color: #3498db;
+            color: white;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: right;
+        }
+
+        .bot-message {
+            background-color: #f2f2f2;
+            color: #333;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: left;
+        }
+
+        input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: #3498db;">Grammar Geek</h1>
+    <div class="chat-container">
+        <div class="bot-message">
+            <p>Your AI powered Language Teacher  👩‍🏫</p>
+        </div>
+        <!-- You can add more chat messages here as the conversation progresses -->
+    </div>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <input type="text" id="user-input" placeholder="Type your message..." onkeyup="handleKeyUp(event)">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+        // JavaScript for sending user messages to the chatbot
+        function sendMessage() {
+            var userMessage = document.getElementById("user-input").value;
+
+            // Add the user's message to the chat container
+            document.querySelector(".chat-container").innerHTML += `<div class="user-message">${userMessage}</div>`;
+
+            // Send the user's message to your Rasa server
+            fetch('http://localhost:5005/webhooks/rest/webhook', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message: userMessage })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Handle the bot's response
+                var botResponse = data[0];
+                if (botResponse.buttons) {
+                    // If the bot response contains buttons, create button elements
+                    var buttonsHtml = botResponse.buttons.map(button =>
+                        `<button onclick="handleButton('${button.payload}')">${button.title}</button>`
+                    ).join('');
+                    // Add the buttons to the chat container
+                    document.querySelector(".chat-container").innerHTML += `<div class="bot-message">${botResponse.text}${buttonsHtml}</div>`;
+                } else {
+                    // If no buttons, just add the bot's text to the chat container
+                    document.querySelector(".chat-container").innerHTML += `<div class="bot-message">${botResponse.text}</div>`;
+                }
+
+                // Scroll to the bottom of the chat container
+                var chatContainer = document.querySelector(".chat-container");
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+            
+                // Scroll to the bottom after adding the user's message
+                var chatContainer = document.querySelector(".chat-container");
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+
+            // Clear the input field after sending the message
+            document.getElementById("user-input").value = "";
+        }
+
+        // Function to handle "Enter" key press
+        function handleKeyUp(event) {
+            if (event.key === "Enter") {
+                sendMessage(); // Call the sendMessage function when Enter is pressed
+            }
+        }
+
+        // Function to handle button click
+        function handleButton(payload) {
+            // Send the button payload as a user message
+            document.getElementById("user-input").value = payload;
+            sendMessage();
+        }
+    </script>
+</body>
+
+</html>
